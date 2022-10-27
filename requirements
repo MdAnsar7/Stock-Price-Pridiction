@@ -1,0 +1,6 @@
+pandas_datareader
+numpy
+pandas
+MinMaxScaler
+matplotlib
+streamlit
