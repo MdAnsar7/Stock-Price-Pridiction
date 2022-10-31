@@ -14,7 +14,7 @@ end = '2022-10-31'
 
 st.title('Stock Trend Pridiction')
 
-user_input = st.text_input('Enter Stock Ticker', 'BTC')
+user_input = st.text_input('Enter CRYPTO Coin', 'BTC')
 user_input = user_input + '-USD'
 df = data.DataReader(user_input, 'yahoo', start, end)
 
@@ -49,8 +49,8 @@ st.pyplot(fig)
 data_training = pd.DataFrame(df['Close'][0:int(len(df) * 0.7)])
 data_testing = pd.DataFrame(df['Close'][int(len(df) * 0.7):int(len(df))])
 
-print(data_training.shape)
-print(data_testing.shape)
+# print(data_training.shape)
+# print(data_testing.shape)
 
 scaler = MinMaxScaler(feature_range=(0, 1))
 
